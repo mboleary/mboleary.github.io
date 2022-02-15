@@ -1,0 +1,19 @@
+# The URL the site will be built for
+base_url = "https://brady.oleary.guru"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customized by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+title = "Code made extraordinary - DeadComputerSociety.com"
+[extra]
+# Put all your custom variables here
+author = "Brady O'Leary"
+copyright_year = 2022
+default_description = "This is Brady's landing page"
