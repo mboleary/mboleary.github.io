@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brady.oleary.guru/sitemap.xml
