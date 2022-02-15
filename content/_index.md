@@ -13,3 +13,8 @@ cursus
 ultrices. Aenean et tincidunt felis.
 
 {{ iconleft(icon="file-text", class="", content="<b>Review my Resume</b>") }}
+{{ iconleft(icon="mail", class="", content="<b>Contact me</b>") }}
+{{ iconleft(icon="github", class="", content="<b>Look at my Github Account</b>") }}
+{{ iconleft(icon="gitlab", class="", content="<b>Look at my Gitlab Account</b>") }}
+{{ iconleft(icon="linkedin", class="", content="<b>Look at my LinkedIn Account</b>") }}
+{{ iconleft(icon="link", class="", content="<b>Look at my blog</b>") }}
