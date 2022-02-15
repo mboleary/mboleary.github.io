@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://brady.oleary.guru"
 
+# Because Github has stupid artificial limitations on what subdirectories can be published
+output_dir="docs"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
@@ -11,7 +14,7 @@ build_search_index = false
 # Whether to do syntax highlighting
 # Theme can be customized by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
-title = "Code made extraordinary - DeadComputerSociety.com"
+title = "Brady O'Leary"
 [extra]
 # Put all your custom variables here
 author = "Brady O'Leary"
