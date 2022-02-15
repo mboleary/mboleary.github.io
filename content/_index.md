@@ -12,9 +12,9 @@ facilisis diam ac quam condimentum, quis suscipit turpis egestas. Nullam ultrici
 cursus
 ultrices. Aenean et tincidunt felis.
 
-{{ iconleft(icon="file-text", class="", content="<b>Review my Resume</b>") }}
-{{ iconleft(icon="mail", class="", content="<b>Contact me</b>") }}
-{{ iconleft(icon="github", class="", content="<b>Look at my Github Account</b>") }}
-{{ iconleft(icon="gitlab", class="", content="<b>Look at my Gitlab Account</b>") }}
+{{ iconleft(icon="file-text", class="", content="<b><a href='resume.pdf'>Review my Resume</a></b>") }}
+{{ iconleft(icon="mail", class="", content="<b><a href='mailto:brady@oleary.guru'>Contact me</a></b>") }}
+{{ iconleft(icon="github", class="", content="<b>See my projects on <a href='https://github.com/mboleary'>Github</a></b>") }}
+{{ iconleft(icon="link", class="", content="<b>Read my blog, <a href='https://deadcomputersociety.com'>The Dead Computer Society</a></b>") }}
 {{ iconleft(icon="linkedin", class="", content="<b>Look at my LinkedIn Account</b>") }}
-{{ iconleft(icon="link", class="", content="<b>Look at my blog</b>") }}
+{{ iconleft(icon="gitlab", class="", content="<b>Look at my <a href='https://gitlab.com/mboleary'>Gitlab Account</a></b>") }}
