@@ -12,6 +12,13 @@
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <script src="/script/feather.min.js"></script>
+    <style>
+        @media only screen and (max-width: 768px) {
+            .mobile-hide {
+                display: none;
+            }
+        }
+    </style>
     <!-- START Google Analytics -->
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -81,8 +88,10 @@
                 <div class="title-banner bg-gradient-a2-a1 fg-dark-color">
                     <div class="container text-center full-width">
                         <div class="flex-layout horizontal ">
-                            <div class="landing_circle">
-                                <img src="/me.jpg">
+                            <div class="margin-auto mobile-hide">
+                                <div class="landing_circle">
+                                    <img src="/me.jpg">
+                                </div>
                             </div>
                             <div class="flex flex-layout vertical center">
                                 <div class="">
@@ -101,14 +110,22 @@
                     
                     
                     <h2 id="about-me">About me</h2>
-<p>I am a software engineer with 3 years of experience specializing in Full-Stack Web Application Development, Technical Writing, and Linux System Administration. In addition to other various computational shenanigans including restoring vintage computers, hardware modifications, and provisioning Raspberry Pis with Ansible, I enjoy learning new technologies and finding new innovative ways to develop applications and creative solutions to difficult problems. In my off-time, you'll find me listening to, writing, or playing music. Below, you'll find links to the artifacts of my work. If in doubt on what to look at first, check out my blog.</p>
-<!--<!-- Contains text and an icon to the left -->
+<p><strong>I am available for hiring. See my resume below</strong></p>
+<p>I am a software engineer with 3 years of experience specializing in Full-Stack Web Application Development, Technical Writing, and Linux System Administration. In addition to other various computational shenanigans including restoring vintage computers, hardware modifications, and provisioning Raspberry Pis with Ansible, I enjoy learning new technologies and finding new innovative ways to develop applications and creative solutions to difficult problems. In my off-time, you'll find me listening to, writing, or playing music.</p>
+<p>Below, you'll find links to the artifacts of my work. If in doubt on what to look at first, check out my blog.</p>
+<p><!-- Contains text and an icon to the left -->
 
 <div class="margin-top-bottom-2x flex-layout horizontal wrap ">
     <div class="icon left"><i data-feather="file-text"></i></div>
-    <p><b>Review my <a href='resume.pdf'>Resume</a> and <a href='cv.pdf'>CV</a></b></p>
-</div>-->
-<p><!-- Contains text and an icon to the left -->
+    <p><b>Review my <a href='resume.pdf'>Resume</a></b></p>
+</div>
+<!-- Contains text and an icon to the left -->
+
+<div class="margin-top-bottom-2x flex-layout horizontal wrap ">
+    <div class="icon left"><i data-feather="mail"></i></div>
+    <p><b>Interested in hiring me? <a href='mailto:hireme@deadcomputersociety.com'>Send me an email</a></b></p>
+</div>
+<!-- Contains text and an icon to the left -->
 
 <div class="margin-top-bottom-2x flex-layout horizontal wrap ">
     <div class="icon left"><i data-feather="github"></i></div>
@@ -119,12 +136,6 @@
 <div class="margin-top-bottom-2x flex-layout horizontal wrap ">
     <div class="icon left"><i data-feather="link"></i></div>
     <p><b>Read my blog, <a href='https://deadcomputersociety.com'>The Dead Computer Society</a></b></p>
-</div>
-<!-- Contains text and an icon to the left -->
-
-<div class="margin-top-bottom-2x flex-layout horizontal wrap ">
-    <div class="icon left"><i data-feather="mail"></i></div>
-    <p><b>Interested in hiring me? <a href='mailto:hireme@deadcomputersociety.com'>Send me an email</a></b></p>
 </div>
 <!-- Contains text and an icon to the left -->
 
