@@ -1,29 +1,9 @@
-{% import "macros.html" as macros %}
+{% extends "arsmateria-zola-theme/templates/index.html" %}
 
-<!Doctype html>
-<html>
-<head>
-    <title>{% block title %}{{config.title}}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="{% block description %}{{config.extra.default_description}}{% endblock description %}">
-    <meta name="author" content="{% block author %}{{config.extra.author}}{% endblock author %}">
-    <meta name="generator" content="Zola">
-    <meta name="keywords" content="{% block keywords %}keywords, go, here{% endblock keywords %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <script src="/script/feather.min.js"></script>
-    <style>
-        @media only screen and (max-width: 768px) {
-            .mobile-hide {
-                display: none;
-            }
-        }
-    </style>
-    <!-- START Google Analytics -->
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+{% block head %}
+<!-- START Google Analytics -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -39,94 +19,37 @@
     gtag('config', 'G-2RVSE7H378');
     </script>
     <!-- END Google Analytics -->
-    <script>
-        window.addEventListener('load', (e) => {
-            feather.replace();
-        });
-    </script>
-    <script>
-        // For toggling dark and light modes
-        function toggleDark() {
-            const elem = document.body;
-            let state = elem.getAttribute("dark");
-            if (state === null) {
-                elem.setAttribute("dark", "");
-            } else {
-                elem.removeAttribute("dark");
-            }
-        }
-    </script>
-    <script>
-        // For opening and closing TOCs
-        var toggleLong = () => {}
-    
-        window.addEventListener('load', () => {
-    
-            const tocShort = document.body.querySelector("nav [toc-short]");
-            const tocLong = document.body.querySelector("nav [toc-long]");
-            
-            toggleLong = function(state) {
-                if (state) {
-                    tocShort.setAttribute("hidden", "");
-                    tocLong.removeAttribute("hidden");
-                } else {
-                    tocShort.removeAttribute("hidden");
-                    tocLong.setAttribute("hidden", "");
-                }
-            }
-        });
-    </script>
-    {% block head %}
-    {% endblock head %}
-</head>
-<body dark class="flex-layout vertical">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5FMP84"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    {% block body %}
-        {% block header %}
-            <header>
-                <div class="title-banner bg-gradient-a2-a1 fg-dark-color">
-                    <div class="container text-center full-width">
-                        <div class="flex-layout horizontal ">
-                            <div class="margin-auto mobile-hide">
-                                <div class="landing_circle">
-                                    <img src="/me.jpg">
-                                </div>
-                            </div>
-                            <div class="flex flex-layout vertical center">
-                                <div class="">
-                                    <h1 class="text-shadow-dark">Brady O'Leary</h1>
-                                    <p class="text-shadow-dark">Full-stack Software Engineer</p>
-                                </div>
-                            </div>
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="title-banner bg-gradient-a2-a1 fg-dark-color">
+            <div class="container text-center full-width">
+                <div class="flex-layout horizontal ">
+                    <div class="margin-auto mobile-hide">
+                        <div class="landing_circle">
+                            <img src="/me.jpg">
+                        </div>
+                    </div>
+                    <div class="flex flex-layout vertical center">
+                        <div class="">
+                            <h1 class="text-shadow-dark">Brady O'Leary</h1>
+                            <p class="text-shadow-dark">Full-stack Software Engineer</p>
                         </div>
                     </div>
                 </div>
-            </header>
-        {% endblock header %}
-        <main class="flex full-width">
-            <div class="container">
-                {% block content %}
-                    {% if page.content %}
-                    {{ page.content | safe }}
-                    {% endif %}
-                    {% if section.content %}
-                    {{ section.content | safe }}
-                    {% endif %}
-                {% endblock content %}
-            </div>
-        </main>
-        {% block footer %}
-        <div class="container full-width">
-            <div class="flex-layout horizontal wrap">
-                <div class="flex"> <button onclick="toggleDark()">Toggle Dark mode</button> </div>
-                <div> © {{config.extra.copyright_year}} - {{config.extra.author}} </div>
             </div>
         </div>
-        <div class="height-20"></div>
-        {% endblock footer %}
-    {% endblock body %}
-</body>
-</html>
+    </header>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    {% if page.content %}
+    {{ page.content | safe }}
+    {% endif %}
+    {% if section.content %}
+    {{ section.content | safe }}
+    {% endif %}
+</div>
+{% endblock content%}
